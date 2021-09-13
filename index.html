@@ -15,17 +15,31 @@
 </head>
 
 <body>
+  <!-- npx tailwindcss-cli build css/tailwind.css -o build/taiwind.css --watch -->
+  <!-- text-[#ffa400] -->
+  <!-- sm: 480px
+  md: 768px
+  lg: 1024px
+  xl: 1280px
+  2xl: 1536px 
+  @media screen and(min-width:n1024px) {
+    font-size: 36px;
+  }
+  sm:taiwind-class
+  md:taiwind-class
+  lg:taiwind-class-->
   <div class="pt-12">
-    <h1 class="text-center text-black text-4xl font-semibold mb-5">Live anywhere</h1>
-    <h2 class="text-center font-light text-xl text-gray-500 mb-10">Keep calm & travel on</h2>
-    <div class="grid grid-cols-3 gap-x-8 max-w-6xl mx-auto">
+    <h1 class="text-center text-gray33 text-lg sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-5">Live anywhere
+    </h1>
+    <h2 class="text-center font-light text-xl text-[#ffa400] mb-35">Keep calm & travel on</h2>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-8 max-w-6xl mx-auto px-[15px] gap-y-7 lg:gap-y-0">
       <div>
         <div class="h-96 mb-5">
           <img
             src="https://images.unsplash.com/photo-1631489711760-8562d32adcb5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1300&q=80"
             alt="" class="w-full h-full rounded-lg object-cover">
         </div>
-        <h3 class="text-center font-medium text-lg">Enjoy the great cold</h3>
+        <h3 class="text-center text-[#073797] font-medium text-lg">Enjoy the great cold</h3>
         <span class="block text-center text-grey-400 text-sm">6,789 properties</span>
       </div>
       <div>
