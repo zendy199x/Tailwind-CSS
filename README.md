@@ -8,6 +8,7 @@ Add library
 npm i --D tailwindcss postcss autoprefixer vite
 ```
 
+Init taiwind
 ```bash
 npx tailwindcss init -p
 ```
