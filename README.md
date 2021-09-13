@@ -23,7 +23,7 @@ In the file tailwind.css, add the command
 
 
 ```bash
-npx tailwindcss-cli build css/tailwind.css -o build/taiwind.css
+npx tailwindcss-cli build css/tailwind.css -o build/taiwind.css --watch
 ```
 
 In the file index.html, add the command
