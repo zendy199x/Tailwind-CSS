@@ -201,11 +201,106 @@
         before:absolute
         before:inset-0
         before:rounded-xl
-        befor: bg-current
+        before:
+        bg-current
         before:opacity-25
       "
     >
       <ion-icon name="airplane-outline"></ion-icon>
     </div>
+
+    <!-- DARK MODE -->
+
+    <label for="toggle" class="inline-block cursor-pointer toggle-switch">
+      <input
+        type="checkbox"
+        name=""
+        id="toggle"
+        class="darkmode-input hidden"
+      />
+      <div
+        class="
+          w-[100px]
+          h-[40px]
+          border border-[#ccc]
+          rounded-full
+          fixed
+          right-5
+          bottom-5
+          z-50
+          p-[5px]
+          transition-colors
+        "
+      >
+        <div
+          class="
+            w-7
+            h-7
+            bg-[#ccc]
+            rounded-full
+            transition-transform
+            darkmode-spinner
+          "
+        ></div>
+      </div>
+    </label>
+    <div class="mx-auto max-w-[1200px] grid grid-cols-4 gap-x-5 p-5">
+      <div
+        class="
+          px-5
+          py-8
+          rounded-lg
+          border border-[#eee]
+          text-center
+          bg-white
+          dark:bg-[#0F0D58]
+        "
+      >
+        <img
+          src="https://free3dicon.com/wp-content/uploads/2021/09/compass_perspective_matte_s-2-300x300.png.webp"
+          alt=""
+          class="mb-5 max-w-[100px] mx-auto"
+        />
+        <h3 class="text-lg font-semibold mb-6 text-[#0F0D58] dark:text-white">
+          Recommendation
+        </h3>
+        <div
+          class="
+            text-sm
+            leading-loose
+            text-[#9191B4]
+            font-normal
+            dark:text-white
+          "
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, odio,
+          facilis vero quod natus molestiae autem provident nam corporis sint
+          accusamus excepturi at in, temporibus architecto ad voluptatibus
+          maxime. Tenetur!
+        </div>
+      </div>
+    </div>
+    <script>
+      const toggleSwitch = document.querySelector(
+        '.toggle-switch input[type="checkbox"]'
+      );
+      const currentTheme = localStorage.getItem("theme");
+      if (currentTheme) {
+        document.documentElement.setAttribute("class", currentTheme);
+        if (currentTheme === "dark") {
+          toggleSwitch.checked = true;
+        }
+      }
+      function switchTheme(e) {
+        if (e.target.checked) {
+          document.documentElement.setAttribute("class", "dark");
+          localStorage.setItem("theme", "dark");
+        } else {
+          document.documentElement.setAttribute("class", "light");
+          localStorage.setItem("theme", "light");
+        }
+      }
+      toggleSwitch.addEventListener("change", switchTheme);
+    </script>
   </body>
 </html>
